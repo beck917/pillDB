@@ -1,4 +1,4 @@
 medis
 =====
 
-Medis is a brand new php memory disk class
+Medis is a storage server use redis protocol persistence By levelDB
