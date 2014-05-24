@@ -1,4 +1,4 @@
-medis
+PillDB
 =====
 
-Medis is a storage server use redis protocol persistence By levelDB
+PillDB is a storage server use redis protocol persistence By levelDB
