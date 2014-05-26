@@ -4,19 +4,10 @@
     <df root="." name="PillDB">
       <df name="deps">
         <df name="hiredis">
-          <df name="adapters">
-            <in>ae.h</in>
-            <in>libev.h</in>
-            <in>libevent.h</in>
-          </df>
           <in>async.c</in>
           <in>async.h</in>
           <in>dict.c</in>
           <in>dict.h</in>
-          <in>example-ae.c</in>
-          <in>example-libev.c</in>
-          <in>example-libevent.c</in>
-          <in>example.c</in>
           <in>fmacros.h</in>
           <in>hiredis.c</in>
           <in>hiredis.h</in>
@@ -24,48 +15,9 @@
           <in>net.h</in>
           <in>sds.c</in>
           <in>sds.h</in>
-          <in>test.c</in>
           <in>zmalloc.h</in>
         </df>
         <df name="jemalloc">
-          <df name="include">
-            <df name="jemalloc">
-              <df name="internal">
-                <in>arena.h</in>
-                <in>atomic.h</in>
-                <in>base.h</in>
-                <in>bitmap.h</in>
-                <in>chunk.h</in>
-                <in>chunk_dss.h</in>
-                <in>chunk_mmap.h</in>
-                <in>ckh.h</in>
-                <in>ctl.h</in>
-                <in>extent.h</in>
-                <in>hash.h</in>
-                <in>huge.h</in>
-                <in>mb.h</in>
-                <in>mutex.h</in>
-                <in>private_namespace.h</in>
-                <in>prng.h</in>
-                <in>prof.h</in>
-                <in>ql.h</in>
-                <in>qr.h</in>
-                <in>quarantine.h</in>
-                <in>rb.h</in>
-                <in>rtree.h</in>
-                <in>stats.h</in>
-                <in>tcache.h</in>
-                <in>tsd.h</in>
-                <in>util.h</in>
-              </df>
-            </df>
-            <df name="msvc_compat">
-              <in>inttypes.h</in>
-              <in>stdbool.h</in>
-              <in>stdint.h</in>
-              <in>strings.h</in>
-            </df>
-          </df>
           <df name="src">
             <in>arena.c</in>
             <in>atomic.c</in>
@@ -89,33 +41,13 @@
             <in>tcache.c</in>
             <in>tsd.c</in>
             <in>util.c</in>
-            <in>zone.c</in>
-          </df>
-          <df name="test">
-            <in>ALLOCM_ARENA.c</in>
-            <in>aligned_alloc.c</in>
-            <in>allocated.c</in>
-            <in>allocm.c</in>
-            <in>bitmap.c</in>
-            <in>mremap.c</in>
-            <in>posix_memalign.c</in>
-            <in>rallocm.c</in>
-            <in>thread_arena.c</in>
-            <in>thread_tcache_enabled.c</in>
           </df>
         </df>
         <df name="linenoise">
-          <in>example.c</in>
           <in>linenoise.c</in>
           <in>linenoise.h</in>
         </df>
         <df name="lua">
-          <df name="etc">
-            <in>all.c</in>
-            <in>lua.hpp</in>
-            <in>min.c</in>
-            <in>noparser.c</in>
-          </df>
           <df name="src">
             <in>lapi.c</in>
             <in>lapi.h</in>
@@ -186,9 +118,6 @@
         <in>ae.c</in>
         <in>ae.h</in>
         <in>ae_epoll.c</in>
-        <in>ae_evport.c</in>
-        <in>ae_kqueue.c</in>
-        <in>ae_select.c</in>
         <in>anet.c</in>
         <in>anet.h</in>
         <in>aof.c</in>
@@ -236,6 +165,7 @@
         <in>redis.h</in>
         <in>redisassert.h</in>
         <in>release.c</in>
+        <in>release.h</in>
         <in>replication.c</in>
         <in>rio.c</in>
         <in>rio.h</in>
@@ -248,7 +178,6 @@
         <in>sha1.h</in>
         <in>slowlog.c</in>
         <in>slowlog.h</in>
-        <in>solarisfixes.h</in>
         <in>sort.c</in>
         <in>syncio.c</in>
         <in>t_hash.c</in>
@@ -256,7 +185,6 @@
         <in>t_set.c</in>
         <in>t_string.c</in>
         <in>t_zset.c</in>
-        <in>testhelp.h</in>
         <in>util.c</in>
         <in>util.h</in>
         <in>version.h</in>
@@ -298,195 +226,37 @@
           <executablePath></executablePath>
         </makeTool>
       </makefileType>
-      <item path="deps/hiredis/adapters/ae.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="deps/hiredis/adapters/libev.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="deps/hiredis/adapters/libevent.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="deps/hiredis/async.c" ex="false" tool="0" flavor2="0">
+      <item path="deps/hiredis/async.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="deps/hiredis/async.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="deps/hiredis/dict.c" ex="false" tool="0" flavor2="0">
+      <item path="deps/hiredis/dict.c" ex="false" tool="3" flavor2="0">
       </item>
       <item path="deps/hiredis/dict.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="deps/hiredis/example-ae.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="deps/hiredis/example-libev.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="deps/hiredis/example-libevent.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="deps/hiredis/example.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="deps/hiredis/fmacros.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="deps/hiredis/hiredis.c" ex="false" tool="0" flavor2="0">
+      <item path="deps/hiredis/hiredis.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="deps/hiredis/hiredis.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="deps/hiredis/net.c" ex="false" tool="0" flavor2="0">
+      <item path="deps/hiredis/net.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="deps/hiredis/net.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="deps/hiredis/sds.c" ex="false" tool="0" flavor2="0">
+      <item path="deps/hiredis/sds.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="deps/hiredis/sds.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="deps/hiredis/test.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="deps/hiredis/zmalloc.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/arena.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/atomic.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/base.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/bitmap.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/chunk.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/chunk_dss.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/chunk_mmap.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/ckh.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/ctl.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/extent.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/hash.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/huge.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/mb.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/mutex.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/private_namespace.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/prng.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/prof.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/ql.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/qr.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/quarantine.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/rb.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/rtree.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/stats.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/tcache.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/tsd.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/jemalloc/internal/util.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/msvc_compat/inttypes.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/msvc_compat/stdbool.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/msvc_compat/stdint.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/include/msvc_compat/strings.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
       </item>
       <item path="deps/jemalloc/src/arena.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -532,47 +302,9 @@
       </item>
       <item path="deps/jemalloc/src/util.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="deps/jemalloc/src/zone.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="deps/jemalloc/test/ALLOCM_ARENA.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="deps/jemalloc/test/aligned_alloc.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="deps/jemalloc/test/allocated.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="deps/jemalloc/test/allocm.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="deps/jemalloc/test/bitmap.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="deps/jemalloc/test/mremap.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="deps/jemalloc/test/posix_memalign.c"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
-      <item path="deps/jemalloc/test/rallocm.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="deps/jemalloc/test/thread_arena.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="deps/jemalloc/test/thread_tcache_enabled.c"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
-      <item path="deps/linenoise/example.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="deps/linenoise/linenoise.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="deps/linenoise/linenoise.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="deps/lua/etc/all.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="deps/lua/etc/lua.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="deps/lua/etc/min.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="deps/lua/etc/noparser.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="deps/lua/src/lapi.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -694,53 +426,103 @@
       </item>
       <item path="deps/lua/src/strbuf.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/adlist.c" ex="false" tool="0" flavor2="0">
+      <folder path="PillDB/deps/jemalloc">
+        <cTool>
+          <incDir>
+            <pElem>deps/jemalloc/include</pElem>
+            <pElem>deps/jemalloc</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>_GNU_SOURCE</Elem>
+            <Elem>_REENTRANT</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="PillDB/deps/lua">
+        <cTool>
+          <preprocessorList>
+            <Elem>LUA_ANSI</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="PillDB/src">
+        <cTool>
+          <incDir>
+            <pElem>deps/hiredis</pElem>
+            <pElem>deps/linenoise</pElem>
+            <pElem>deps/lua/src</pElem>
+            <pElem>deps/jemalloc/include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>USE_JEMALLOC</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <item path="src/adlist.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/adlist.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/ae.c" ex="false" tool="0" flavor2="0">
+      <item path="src/ae.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/ae.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/ae_epoll.c" ex="false" tool="0" flavor2="0">
+      <item path="src/ae_epoll.c" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/ae_evport.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="src/ae_kqueue.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="src/ae_select.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="src/anet.c" ex="false" tool="0" flavor2="0">
+      <item path="src/anet.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/anet.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/aof.c" ex="false" tool="0" flavor2="0">
+      <item path="src/aof.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/asciilogo.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/bio.c" ex="false" tool="0" flavor2="0">
+      <item path="src/bio.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/bio.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/bitops.c" ex="false" tool="0" flavor2="0">
+      <item path="src/bitops.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/config.c" ex="false" tool="0" flavor2="0">
+      <item path="src/config.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/config.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/crc64.c" ex="false" tool="0" flavor2="0">
+      <item path="src/crc64.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/crc64.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/db.c" ex="false" tool="0" flavor2="0">
+      <item path="src/db.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/debug.c" ex="false" tool="0" flavor2="0">
+      <item path="src/debug.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/dict.c" ex="false" tool="0" flavor2="0">
+      <item path="src/dict.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/dict.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/endianconv.c" ex="false" tool="0" flavor2="0">
+      <item path="src/endianconv.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/endianconv.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -748,9 +530,13 @@
       </item>
       <item path="src/help.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/hyperloglog.c" ex="false" tool="0" flavor2="0">
+      <item path="src/hyperloglog.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/intset.c" ex="false" tool="0" flavor2="0">
+      <item path="src/intset.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/intset.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -758,109 +544,181 @@
       </item>
       <item path="src/lzfP.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/lzf_c.c" ex="false" tool="0" flavor2="0">
+      <item path="src/lzf_c.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/lzf_d.c" ex="false" tool="0" flavor2="0">
+      <item path="src/lzf_d.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/memtest.c" ex="false" tool="0" flavor2="0">
+      <item path="src/memtest.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/migrate.c" ex="false" tool="0" flavor2="0">
+      <item path="src/migrate.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/multi.c" ex="false" tool="0" flavor2="0">
+      <item path="src/multi.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/networking.c" ex="false" tool="0" flavor2="0">
+      <item path="src/networking.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/notify.c" ex="false" tool="0" flavor2="0">
+      <item path="src/notify.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/object.c" ex="false" tool="0" flavor2="0">
+      <item path="src/object.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/pqsort.c" ex="false" tool="0" flavor2="0">
+      <item path="src/pqsort.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/pqsort.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/pubsub.c" ex="false" tool="0" flavor2="0">
+      <item path="src/pubsub.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/rand.c" ex="false" tool="0" flavor2="0">
+      <item path="src/rand.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/rand.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/rdb.c" ex="false" tool="0" flavor2="0">
+      <item path="src/rdb.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/rdb.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/redis-benchmark.c" ex="false" tool="0" flavor2="0">
+      <item path="src/redis-benchmark.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/redis-check-aof.c" ex="false" tool="0" flavor2="0">
+      <item path="src/redis-check-aof.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/redis-check-dump.c" ex="false" tool="0" flavor2="0">
+      <item path="src/redis-check-dump.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/redis-cli.c" ex="false" tool="0" flavor2="0">
+      <item path="src/redis-cli.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/redis.c" ex="false" tool="0" flavor2="0">
+      <item path="src/redis.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/redis.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/redisassert.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/release.c" ex="false" tool="0" flavor2="0">
+      <item path="src/release.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/replication.c" ex="false" tool="0" flavor2="0">
+      <item path="src/release.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/rio.c" ex="false" tool="0" flavor2="0">
+      <item path="src/replication.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="src/rio.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/rio.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/scripting.c" ex="false" tool="0" flavor2="0">
+      <item path="src/scripting.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/sds.c" ex="false" tool="0" flavor2="0">
+      <item path="src/sds.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/sds.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/sentinel.c" ex="false" tool="0" flavor2="0">
+      <item path="src/sentinel.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/setproctitle.c" ex="false" tool="0" flavor2="0">
+      <item path="src/setproctitle.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/sha1.c" ex="false" tool="0" flavor2="0">
+      <item path="src/sha1.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/sha1.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/slowlog.c" ex="false" tool="0" flavor2="0">
+      <item path="src/slowlog.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/slowlog.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/solarisfixes.h" ex="false" tool="3" flavor2="0">
+      <item path="src/sort.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/sort.c" ex="false" tool="0" flavor2="0">
+      <item path="src/syncio.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/syncio.c" ex="false" tool="0" flavor2="0">
+      <item path="src/t_hash.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/t_hash.c" ex="false" tool="0" flavor2="0">
+      <item path="src/t_list.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/t_list.c" ex="false" tool="0" flavor2="0">
+      <item path="src/t_set.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/t_set.c" ex="false" tool="0" flavor2="0">
+      <item path="src/t_string.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/t_string.c" ex="false" tool="0" flavor2="0">
+      <item path="src/t_zset.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
-      <item path="src/t_zset.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="src/testhelp.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="src/util.c" ex="false" tool="0" flavor2="0">
+      <item path="src/util.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/util.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/version.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/ziplist.c" ex="false" tool="0" flavor2="0">
+      <item path="src/ziplist.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/ziplist.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/zipmap.c" ex="false" tool="0" flavor2="0">
+      <item path="src/zipmap.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/zipmap.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/zmalloc.c" ex="false" tool="0" flavor2="0">
+      <item path="src/zmalloc.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
       </item>
       <item path="src/zmalloc.h" ex="false" tool="3" flavor2="0">
       </item>

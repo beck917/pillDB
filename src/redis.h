@@ -50,6 +50,7 @@
 #include <netinet/in.h>
 #include <lua.h>
 #include <signal.h>
+#include <leveldb/c.h>
 
 #include "ae.h"      /* Event driven programming library */
 #include "sds.h"     /* Dynamic safe strings */
@@ -786,6 +787,18 @@ struct redisServer {
     int assert_line;
     int bug_report_start; /* True if bug report header was already logged. */
     int watchdog_period;  /* Software watchdog period in ms. 0 = off */
+	
+	/* LevelDB config */
+	leveldb_t *leveldb;
+	leveldb_cache_t *leveldb_cache;
+	leveldb_options_t      *leveldb_options;
+	char *leveldb_path;
+	size_t leveldb_lru_cache;
+	size_t leveldb_create_if_missing;
+	size_t leveldb_write_buffer_size;
+	size_t leveldb_write_buffer_size;
+	size_t leveldb_block_size;
+	size_t leveldb_max_open_files;
 };
 
 typedef struct pubsubPattern {

@@ -5,8 +5,9 @@
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>PillDB</name>
             <c-extensions>c</c-extensions>
-            <cpp-extensions/>
+            <cpp-extensions>cc</cpp-extensions>
             <header-extensions>h,hpp</header-extensions>
+            <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>.</sourceRootElem>
@@ -17,7 +18,6 @@
                     <type>0</type>
                 </confElem>
             </confList>
-            <sourceEncoding>UTF-8</sourceEncoding>
         </data>
     </configuration>
 </project>
