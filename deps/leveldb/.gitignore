@@ -7,3 +7,6 @@ build_config.mk
 *_test
 db_bench
 leveldbutil
+!/build_config.mk
+!/libleveldb.dylib.1
+!/libleveldb.dylib.1.15
