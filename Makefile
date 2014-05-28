@@ -3,6 +3,7 @@
 default: all
 
 .DEFAULT:
+	cd deps/leveldb && make
 	cd src && $(MAKE) $@
 
 install:

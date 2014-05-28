@@ -114,8 +114,8 @@ struct redisCommand *commandTable;
  * M: Do not automatically propagate the command on MONITOR.
  */
 struct redisCommand redisCommandTable[] = {
-    {"get",getCommand,2,"r",0,NULL,1,1,1,0,0},
-    {"set",setCommand,-3,"wm",0,noPreloadGetKeys,1,1,1,0,0},
+    {"get",getLeveldbCommand,2,"r",0,NULL,1,1,1,0,0},
+    {"set",setLeveldbCommand,-3,"wm",0,noPreloadGetKeys,1,1,1,0,0},
     {"setnx",setnxCommand,3,"wm",0,noPreloadGetKeys,1,1,1,0,0},
     {"setex",setexCommand,4,"wm",0,noPreloadGetKeys,1,1,1,0,0},
     {"psetex",psetexCommand,4,"wm",0,noPreloadGetKeys,1,1,1,0,0},
@@ -1720,6 +1720,7 @@ void initServer() {
     scriptingInit();
     slowlogInit();
     bioInit();
+    leveldbInit();
 }
 
 /* Populates the Redis Command Table starting from the hard coded list
@@ -3115,8 +3116,9 @@ int main(int argc, char **argv) {
         loadServerConfig(configfile,options);
         sdsfree(options);
     } else {
-        redisLog(REDIS_WARNING, "Warning: no config file specified, using the default config. In order to specify a config file use %s /path/to/%s.conf", argv[0], server.sentinel_mode ? "sentinel" : "redis");
+        redisLog(REDIS_WARNING, "Warning: no config file specified, using the default config. In order to specify a config file use %s /path/to/%s.conf", argv[0], server.sentinel_mode ? "sentinel" : "pilldb");
     }
+    
     if (server.daemonize) daemonize();
     initServer();
     if (server.daemonize) createPidFile();

@@ -71,7 +71,7 @@
 #define REDIS_DEFAULT_HZ        10      /* Time interrupt calls/sec. */
 #define REDIS_MIN_HZ            1
 #define REDIS_MAX_HZ            500 
-#define REDIS_SERVERPORT        6379    /* TCP port */
+#define REDIS_SERVERPORT        6399    /* TCP port */
 #define REDIS_TCP_BACKLOG       511     /* TCP listen backlog */
 #define REDIS_MAXIDLETIME       0       /* default client timeout: infinite */
 #define REDIS_DEFAULT_DBNUM     16
@@ -791,11 +791,12 @@ struct redisServer {
 	/* LevelDB config */
 	leveldb_t *leveldb;
 	leveldb_cache_t *leveldb_cache;
-	leveldb_options_t      *leveldb_options;
+	leveldb_options_t *leveldb_options;
+    leveldb_writeoptions_t *leveldb_writeoptions;
+    leveldb_readoptions_t  *leveldb_readoptions;
 	char *leveldb_path;
 	size_t leveldb_lru_cache;
 	size_t leveldb_create_if_missing;
-	size_t leveldb_write_buffer_size;
 	size_t leveldb_write_buffer_size;
 	size_t leveldb_block_size;
 	size_t leveldb_max_open_files;
@@ -1383,6 +1384,11 @@ void pfaddCommand(redisClient *c);
 void pfcountCommand(redisClient *c);
 void pfmergeCommand(redisClient *c);
 void pfdebugCommand(redisClient *c);
+
+/* LevelDB Init & Commands*/
+void leveldbInit();
+void getLeveldbCommand(redisClient *c);
+void setLeveldbCommand(redisClient *c);
 
 #if defined(__GNUC__)
 void *calloc(size_t count, size_t size) __attribute__ ((deprecated));

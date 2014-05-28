@@ -455,8 +455,8 @@
   <confs>
     <conf name="Default" type="0">
       <toolsSet>
-        <developmentServer>root@192.168.1.89:22</developmentServer>
-        <platform>2</platform>
+        <developmentServer>localhost</developmentServer>
+        <platform>4</platform>
       </toolsSet>
       <compile>
         <compiledirpicklist>
