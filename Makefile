@@ -3,12 +3,11 @@
 default: all
 
 .DEFAULT:
-	ldconfig
 	cd deps/leveldb && make
 	rm -rf /usr/local/lib/libleveldb.so.1
+	rm -rf /usr/local/lib/libleveldb.so
 	cp ./deps/leveldb/libleveldb.so.1 /usr/local/lib
-	ln -s libleveldb.so.1 libleveldb.so
-	ldconfig
+	cp ./deps/leveldb/libleveldb.so /usr/local/lib
 	cd src && $(MAKE) $@
 
 install:
